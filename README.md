@@ -32,4 +32,4 @@ You have o create a Database in your Postgresql which is `Tasks` then you have t
 You can start the server by using this command `npm start`
 
 ## License
-node-cron is under [ISC License](https://github.com/001Sagar/jwt-auth-helper/blob/master/LICENSE.md).
+node-cron is under [ISC License](https://github.com/001Sagar/Task_Management_System/blob/master/LICENSE.md).
