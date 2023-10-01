@@ -1,5 +1,3 @@
-// Import the framework and instantiate it
-// import * as functions from 'firebase-functions';
 import Fastify from 'fastify'
 const fastify = Fastify({
   logger: true
@@ -15,12 +13,6 @@ fastify.get('/', async function handler (request, reply) {
 
 fastify.register(taskRoutes);
 
-// export const api = functions.https.onRequest((req, res) => {
-//   fastify.ready(err => {
-//     if (err) throw err;
-//     fastify.server.emit('request', req, res);
-//   });
-// });
 
 // Run the server!
 async function start(){
