@@ -6,7 +6,6 @@ import { sequelize } from '../db/database';
 
 // API to Create the New Task
 export const createTask = async (req: Request, reply: Response) => {
-  // Implement logic to create a task
   try {
     const { task_id, task_name, description } = req.body as Record<string, any>;
     // Create a new task using Sequelize
@@ -24,14 +23,14 @@ export const createTask = async (req: Request, reply: Response) => {
     const newTask = await sequelize.query(query);
     console.log(newTask)
     // Send a success response with the created task
-    reply.code(201).send({ message: "Task Addded Successfully" });
+     return reply.code(201).send({ message: "Task Addded Successfully" });
   } catch (error) {
     console.error(error);
-    reply.code(500).send(error);
+     return reply.code(500).send(error);
   }
 }
 
-//
+// API to get the All Tasks
 export const listTasks = async (req: Request, reply: Response) => {
   try {
     const data = await sequelize.query('select * from task');
@@ -55,7 +54,7 @@ export const updateTask = async (req: Request, reply: Response) => {
     return reply.code(202).send({message :"Updates Successfullt"});
   } catch (error) {
     console.log(error)
-    reply.code(500).send(error);
+    return reply.code(500).send(error);
   }
 }
 
@@ -76,6 +75,6 @@ export const deleteTask = async (req: Request, reply: Response) => {
     return reply.code(202).send({message :"Deleted  Successfullt"});
   } catch (error) {
     console.log(error)
-    reply.code(500).send(error);
+    return reply.code(500).send(error);
   }
 }
