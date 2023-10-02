@@ -24,7 +24,7 @@ Tasks are stored in a PostgreSQL database, allowing for efficient data managemen
 For detailed information on how to use the API, refer to the API documentation. You can access the documentation at: `http://localhost:3000/docs`
 
 ### Database Schema : 
-You have to create a Database in your Postgresql which is `Tasks` then you have to createa table name `Task` the create a schema which is 
+You have to create a Database in your Postgresql which is `Tasks` then you have to createa table name `Tasks` the create a schema which is 
 `create table Task(task_id int not null Primary key, task_name varchar not null,description varchar not null)` . Then, You have successfully create the database
 
 

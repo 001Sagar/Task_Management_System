@@ -51,7 +51,7 @@ export const updateTask = async (req: Request, reply: Response) => {
   where task_id = '${task_id}' `
     const data = await sequelize.query(query);
     console.log(data);
-    return reply.code(202).send({message :"Updates Successfullt"});
+    return reply.code(202).send({message :"Updated Successfully"});
   } catch (error) {
     console.log(error)
     return reply.code(500).send(error);
